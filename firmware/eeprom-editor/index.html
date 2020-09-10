@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RX-8 Speed-Sensitive Wiper Upgrade EEPROM Data Calculator</title>
+	<style type="text/css">
+		h1 {
+			font-size: 150%;
+		}
+		
+		table#int_vol_resistances {
+			border-collapse: collapse;
+		}
+		
+		table#int_vol_resistances th, table#int_vol_resistances td {
+			padding: 0 10px 6px 0;
+		}
+	
+		#int_vol_resistances input {
+			width: 5em;
+		}
+	
+		#int_vol_resistances input:invalid {
+			box-shadow: 0 0 5px 1px red;
+		}
+	</style>
+	<script type="text/javascript" src="eeprom_editor.js"></script>
+</head>
+<body>
+
+<h1>RX-8 Speed-Sensitive Wiper Upgrade EEPROM Data Calculator</h1>
+
+<form id="form">
+	<p>Enter your wiper stalk's resistance measurements in the fields below. Setting 8 is with the rotary knob in the top-most position; setting 0 bottom-most.</p>
+
+	<table id="int_vol_resistances">
+		<thead>
+			<tr>
+				<th>Setting</th>
+				<th>Min. Resistance (kΩ)</th>
+				<th>Max. Resistance (kΩ)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>8</td>
+				<td><input id="setting_8_min_res" type="number" min="0" max="50" step="0.1" required></td>
+				<td><input id="setting_8_max_res" type="number" min="0" max="50" step="0.1" required></td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td><input id="setting_7_min_res" type="number" min="0" max="50" step="0.1" required></td>
+				<td><input id="setting_7_max_res" type="number" min="0" max="50" step="0.1" required></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td><input id="setting_6_min_res" type="number" min="0" max="50" step="0.1" required></td>
+				<td><input id="setting_6_max_res" type="number" min="0" max="50" step="0.1" required></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td><input id="setting_5_min_res" type="number" min="0" max="50" step="0.1" required></td>
+				<td><input id="setting_5_max_res" type="number" min="0" max="50" step="0.1" required></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td><input id="setting_4_min_res" type="number" min="0" max="50" step="0.1" required></td>
+				<td><input id="setting_4_max_res" type="number" min="0" max="50" step="0.1" required></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td><input id="setting_3_min_res" type="number" min="0" max="50" step="0.1" required></td>
+				<td><input id="setting_3_max_res" type="number" min="0" max="50" step="0.1" required></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td><input id="setting_2_min_res" type="number" min="0" max="50" step="0.1" required></td>
+				<td><input id="setting_2_max_res" type="number" min="0" max="50" step="0.1" required></td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td><input id="setting_1_min_res" type="number" min="0" max="50" step="0.1" required></td>
+				<td><input id="setting_1_max_res" type="number" min="0" max="50" step="0.1" required></td>
+			</tr>
+			<tr>
+				<td>0</td>
+				<td><input id="setting_0_min_res" type="number" min="0" max="50" step="0.1" required></td>
+				<td><input id="setting_0_max_res" type="number" min="0" max="50" step="0.1" required></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p><button id="go" type="submit">Calculate EEPROM Data</button></p>
+
+	<div>
+		<p>EEPROM Data (in Intel Hex format):</p>
+		<textarea id="out" cols="80" rows="20" readonly></textarea>
+		<p>Copy this data into a plain text editor (e.g. Notepad) and save it under a filename with a '.hex' extension. Then program the device's EEPROM by writing the file's data to it.</p>
+	</div>
+</form>
+
+</body>
+</html>
