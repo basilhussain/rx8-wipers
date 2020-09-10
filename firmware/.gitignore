@@ -1,9 +1,2 @@
-*.ihx
-*.hex
-*.s19
-*.srec
-*.eep
-*.elf
-
 Debug/*
 Release/*
