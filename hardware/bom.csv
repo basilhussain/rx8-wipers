@@ -18,3 +18,7 @@ R4,Resistor,62kΩ,0805,"125mW, 1%",-,-,1
 R12,Resistor,0Ω,0805,"125mW, 5%",-,-,1
 U1,Linear Voltage Regulator,,SOIC-8,"5.0V, ±5%",ON Semiconductor,LM2931D-5.0G,1
 U2,Micro­controller,,SOIC-14,"8KB Flash, 512B SRAM, 512B EEPROM",Atmel (Microchip),ATTINY841-SSU,1
+-,Housing,,,"XH series, 2-pin, 2.5mm pitch",JST,XHP-2,1
+-,Crimp Terminal,,,"XH series, 22-28AWG, tin-plated",JST,BXH-001T-P0.6,1
+-,Wire,,,"22AWG, 1 metre",-,-,1
+-,Tap/Splice,,,Suitable for 18-22AWG wire,-,-,1
