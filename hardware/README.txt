@@ -4,6 +4,6 @@ PCB specifications:
 
 - 1.6 mm
 - Two layer
-- 2 oz / 35 um copper
+- 2 oz / 70 um copper
 
 Schematic and PCB layout were produced with DipTrace version 3.3.1.
